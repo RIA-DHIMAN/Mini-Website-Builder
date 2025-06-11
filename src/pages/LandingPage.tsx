@@ -57,7 +57,7 @@ function LandingPage() {
               <div className="flex items-center">
                 <Layout className="h-8 w-8 text-primary" />
                 <span className="ml-2 text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  PageCraft
+                  MINI-WEB-BUILDER
                 </span>
               </div>
               <div className="flex items-center space-x-4">
@@ -245,7 +245,7 @@ function LandingPage() {
                   </li>
                   <li className="flex items-center">
                     <Check className="h-5 w-5 text-green-500 mr-3" />
-                    <span className="text-theme-secondary">PageCraft Branding</span>
+                    <span className="text-theme-secondary">MINI-WEB-BUILDER Branding</span>
                   </li>
                 </ul>
                 <button
@@ -330,7 +330,7 @@ function LandingPage() {
               Ready to Build Your Perfect Landing Page?
             </h2>
             <p className="text-xl text-white/80 mb-8">
-              Join thousands of creators who trust PageCraft to bring their ideas to life.
+              Join thousands of creators who trust MINI-WEB-BUILDER to bring their ideas to life.
             </p>
             <button
               onClick={() => {
@@ -352,10 +352,10 @@ function LandingPage() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <Layout className="h-8 w-8 text-primary" />
-              <span className="ml-2 text-xl font-bold text-theme-primary">PageCraft</span>
+              <span className="ml-2 text-xl font-bold text-theme-primary">MINI-WEB-BUILDER</span>
             </div>
             <div className="text-theme-secondary">
-              © 2024 PageCraft. All rights reserved.
+              © 2024 MINI-WEB-BUILDER. All rights reserved.
             </div>
           </div>
         </div>

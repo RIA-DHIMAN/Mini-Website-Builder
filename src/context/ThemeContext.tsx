@@ -64,13 +64,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Load saved theme from localStorage
-    const savedTheme = localStorage.getItem('pagecraft_theme') as Theme;
+    const savedTheme = localStorage.getItem('MINI-WEB-BUILDER_theme') as Theme;
     if (savedTheme) {
       setTheme(savedTheme);
     }
 
     // Load saved color scheme from localStorage
-    const savedColorScheme = localStorage.getItem('pagecraft_color_scheme');
+    const savedColorScheme = localStorage.getItem('MINI-WEB-BUILDER_color_scheme');
     if (savedColorScheme) {
       setColorScheme(JSON.parse(savedColorScheme));
     }
@@ -84,7 +84,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     root.classList.add(theme);
 
     // Save theme to localStorage
-    localStorage.setItem('pagecraft_theme', theme);
+    localStorage.setItem('MINI-WEB-BUILDER_theme', theme);
 
     // Update CSS variables based on theme
     if (theme === 'dark') {
@@ -110,7 +110,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
 
     // Save color scheme to localStorage
-    localStorage.setItem('pagecraft_color_scheme', JSON.stringify(colorScheme));
+    localStorage.setItem('MINI-WEB-BUILDER_color_scheme', JSON.stringify(colorScheme));
   }, [theme, colorScheme]);
 
   const toggleTheme = () => {

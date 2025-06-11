@@ -29,7 +29,7 @@ function AccountPage() {
   };
 
   const subscriptionPlans = {
-    free: { name: 'Free', price: '$0', features: ['3 Landing Pages', 'Basic Templates', 'PageCraft Branding'] },
+    free: { name: 'Free', price: '$0', features: ['3 Landing Pages', 'Basic Templates', 'MINI-WEB-BUILDER Branding'] },
     pro: { name: 'Pro', price: '$29', features: ['Unlimited Pages', 'Premium Templates', 'Custom Domain', 'Analytics'] },
     enterprise: { name: 'Enterprise', price: '$99', features: ['Everything in Pro', 'Team Collaboration', 'Priority Support', 'Custom Integrations'] }
   };

@@ -18,7 +18,7 @@ function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center">
             <Layout className="h-8 w-8 text-primary" />
-            <span className="ml-2 text-xl font-semibold text-theme-primary">PageCraft</span>
+            <span className="ml-2 text-xl font-semibold text-theme-primary">MINI-WEB-BUILDER</span>
           </Link>
           
           {user && (

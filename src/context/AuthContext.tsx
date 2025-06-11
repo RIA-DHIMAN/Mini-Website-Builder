@@ -29,7 +29,7 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 const mockUsers: User[] = [
   {
     id: '1',
-    email: 'admin@pagecraft.com',
+    email: 'admin@MINI-WEB-BUILDER.com',
     name: 'Admin User',
     role: 'admin',
     createdAt: '2024-01-01',
@@ -60,8 +60,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Check if user is already logged in (from localStorage)
-    const savedUser = localStorage.getItem('pagecraft_user');
-    const savedUsers = localStorage.getItem('pagecraft_users');
+    const savedUser = localStorage.getItem('MINI-WEB-BUILDER_user');
+    const savedUsers = localStorage.getItem('MINI-WEB-BUILDER_users');
     
     if (savedUser) {
       setUser(JSON.parse(savedUser));
@@ -70,7 +70,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (savedUsers) {
       setUsers(JSON.parse(savedUsers));
     } else {
-      localStorage.setItem('pagecraft_users', JSON.stringify(mockUsers));
+      localStorage.setItem('MINI-WEB-BUILDER_users', JSON.stringify(mockUsers));
     }
     
     setIsLoading(false);
@@ -87,7 +87,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     
     if (existingUser && password) {
       setUser(existingUser);
-      localStorage.setItem('pagecraft_user', JSON.stringify(existingUser));
+      localStorage.setItem('MINI-WEB-BUILDER_user', JSON.stringify(existingUser));
       setIsLoading(false);
       return true;
     }
@@ -98,7 +98,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         id: Date.now().toString(),
         email,
         name: email.split('@')[0],
-        role: email === 'admin@pagecraft.com' ? 'admin' : 'user',
+        role: email === 'admin@MINI-WEB-BUILDER.com' ? 'admin' : 'user',
         createdAt: new Date().toISOString().split('T')[0],
         subscription: 'free',
       };
@@ -106,8 +106,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const updatedUsers = [...users, newUser];
       setUsers(updatedUsers);
       setUser(newUser);
-      localStorage.setItem('pagecraft_user', JSON.stringify(newUser));
-      localStorage.setItem('pagecraft_users', JSON.stringify(updatedUsers));
+      localStorage.setItem('MINI-WEB-BUILDER_user', JSON.stringify(newUser));
+      localStorage.setItem('MINI-WEB-BUILDER_users', JSON.stringify(updatedUsers));
       setIsLoading(false);
       return true;
     }
@@ -134,7 +134,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         id: Date.now().toString(),
         email,
         name,
-        role: email === 'admin@pagecraft.com' ? 'admin' : 'user',
+        role: email === 'admin@MINI-WEB-BUILDER.com' ? 'admin' : 'user',
         createdAt: new Date().toISOString().split('T')[0],
         subscription: 'free',
       };
@@ -142,8 +142,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const updatedUsers = [...users, newUser];
       setUsers(updatedUsers);
       setUser(newUser);
-      localStorage.setItem('pagecraft_user', JSON.stringify(newUser));
-      localStorage.setItem('pagecraft_users', JSON.stringify(updatedUsers));
+      localStorage.setItem('MINI-WEB-BUILDER_user', JSON.stringify(newUser));
+      localStorage.setItem('MINI-WEB-BUILDER_users', JSON.stringify(updatedUsers));
       setIsLoading(false);
       return true;
     }
@@ -163,8 +163,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     
     setUser(updatedUser);
     setUsers(updatedUsers);
-    localStorage.setItem('pagecraft_user', JSON.stringify(updatedUser));
-    localStorage.setItem('pagecraft_users', JSON.stringify(updatedUsers));
+    localStorage.setItem('MINI-WEB-BUILDER_user', JSON.stringify(updatedUser));
+    localStorage.setItem('MINI-WEB-BUILDER_users', JSON.stringify(updatedUsers));
     setIsLoading(false);
     return true;
   };
@@ -178,8 +178,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const updatedUsers = users.filter(u => u.id !== user.id);
     setUsers(updatedUsers);
     setUser(null);
-    localStorage.removeItem('pagecraft_user');
-    localStorage.setItem('pagecraft_users', JSON.stringify(updatedUsers));
+    localStorage.removeItem('MINI-WEB-BUILDER_user');
+    localStorage.setItem('MINI-WEB-BUILDER_users', JSON.stringify(updatedUsers));
     setIsLoading(false);
     return true;
   };
@@ -196,7 +196,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     
     const updatedUsers = users.map(u => u.id === userId ? { ...u, role } : u);
     setUsers(updatedUsers);
-    localStorage.setItem('pagecraft_users', JSON.stringify(updatedUsers));
+    localStorage.setItem('MINI-WEB-BUILDER_users', JSON.stringify(updatedUsers));
     setIsLoading(false);
     return true;
   };
@@ -209,14 +209,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     
     const updatedUsers = users.filter(u => u.id !== userId);
     setUsers(updatedUsers);
-    localStorage.setItem('pagecraft_users', JSON.stringify(updatedUsers));
+    localStorage.setItem('MINI-WEB-BUILDER_users', JSON.stringify(updatedUsers));
     setIsLoading(false);
     return true;
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('pagecraft_user');
+    localStorage.removeItem('MINI-WEB-BUILDER_user');
   };
 
   return (
